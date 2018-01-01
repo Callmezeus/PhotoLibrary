@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlbumController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="500.0">
+         <top>
+            <AnchorPane prefHeight="54.0" prefWidth="503.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="AlbumsReturn" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#ReturnToAlbums" text="Return Home" />
+                  <Button fx:id="LogoutCurrentAlbum" layoutX="442.0" layoutY="6.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <BorderPane prefHeight="192.0" prefWidth="514.0" BorderPane.alignment="CENTER">
+               <top>
+                  <AnchorPane prefHeight="0.0" prefWidth="523.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text layoutX="177.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Album Information" underline="true" />
+                        <Text layoutX="2.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Album Name: " />
+                        <Text layoutX="2.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oldest Picture:" />
+                        <Text layoutX="2.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current photos:" />
+                        <TextField fx:id="AlbumName" editable="false" layoutX="89.0" layoutY="43.0" prefHeight="25.0" prefWidth="357.0" />
+                        <TextField fx:id="NumberOfPhotos" editable="false" layoutX="89.0" layoutY="80.0" prefHeight="25.0" prefWidth="359.0" />
+                        <TextField fx:id="OldestPhoto" editable="false" layoutX="89.0" layoutY="119.0" prefHeight="25.0" prefWidth="361.0" />
+                        <TextField fx:id="LatestPhoto" editable="false" layoutX="89.0" layoutY="157.0" prefHeight="25.0" prefWidth="362.0" />
+                        <Text layoutX="2.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Newest Picture:" wrappingWidth="103.123046875" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="PhotoListView" layoutY="21.0" prefHeight="256.0" prefWidth="500.0" AnchorPane.bottomAnchor="-23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0" />
+                  <Text layoutX="191.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Photo Gallery" underline="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <Button fx:id="CreateNewPhoto" layoutX="60.0" layoutY="-5.0" mnemonicParsing="false" onAction="#CreatePhoto" text="Create Photo" />
+                  <Button fx:id="DeletePhoto" layoutX="356.0" layoutY="-5.0" mnemonicParsing="false" onAction="#DeletePhoto" text="Delete Photo" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

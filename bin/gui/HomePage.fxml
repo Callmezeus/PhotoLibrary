@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="410.0">
+         <top>
+            <AnchorPane prefHeight="34.0" prefWidth="429.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator layoutX="-1.0" layoutY="38.0" prefHeight="6.0" prefWidth="410.0" />
+                  <Text layoutX="159.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Album Manager" underline="true" />
+                  <Button layoutX="347.0" layoutY="10.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="151.0" prefWidth="429.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="CreateAlbumButton" layoutX="16.0" layoutY="27.0" mnemonicParsing="false" onAction="#CreateAlbum" prefHeight="25.0" prefWidth="142.0" text="Create Album" />
+                  <Button fx:id="SearchPhotos" layoutX="98.0" layoutY="95.0" mnemonicParsing="false" onAction="#SearchAllPhotos" prefHeight="42.0" prefWidth="207.0" text="Search For a Photo" />
+                  <Text layoutX="184.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options" underline="true" />
+                  <Button layoutX="245.0" layoutY="27.0" mnemonicParsing="false" onAction="#DeleteSelectedAlbum" prefHeight="25.0" prefWidth="145.0" text="Delete Specified Album" />
+                  <TextField fx:id="DeleteAlbumField" editable="false" layoutX="16.0" layoutY="62.0" prefHeight="25.0" prefWidth="374.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="296.0" prefWidth="388.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="AlbumListView" layoutY="20.0" prefHeight="278.0" prefWidth="410.0" />
+                  <Text layoutX="181.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Albums" underline="true" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

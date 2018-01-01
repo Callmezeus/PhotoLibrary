@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.71" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="350.0">
+         <bottom>
+            <AnchorPane prefHeight="177.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefHeight="4.0" prefWidth="350.0" />
+                  <TextField fx:id="NewUsername" layoutX="160.0" layoutY="12.0" />
+                  <Text layoutX="8.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create New Username" wrappingWidth="142.13671875" />
+                  <Button fx:id="CreateNewUsername" layoutX="9.0" layoutY="45.0" mnemonicParsing="false" onAction="#CreateNewUser" text="Create" />
+                  <Button fx:id="Logout" layoutX="286.0" layoutY="138.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+                  <Text layoutX="8.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Selected User" />
+                  <TextField fx:id="DeleteUserName" editable="false" layoutX="160.0" layoutY="76.0" />
+                  <Button fx:id="DeleteUserButton" layoutX="8.0" layoutY="111.0" mnemonicParsing="false" onAction="#DeleteSelectedUser" text="Delete" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="36.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator layoutX="-6.0" layoutY="33.0" prefHeight="5.0" prefWidth="360.0" />
+                  <Text layoutX="103.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Management" textAlignment="CENTER" underline="true" wrappingWidth="148.13671875" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="159.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" underline="true" />
+                  <TableView fx:id="table" layoutX="66.0" layoutY="30.0" prefHeight="255.0" prefWidth="354.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                    <columns>
+                      <TableColumn fx:id="usernameColumn" prefWidth="353.0" text="Usernames" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
